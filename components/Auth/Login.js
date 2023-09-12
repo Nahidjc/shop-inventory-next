@@ -2,9 +2,9 @@
 "use client"
 import React, { useState } from 'react';
 import { login } from '../../store/reducers/auth';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 const Login = () => {
-  // const dispatch = useDispatch(); 
+  const dispatch = useDispatch(); 
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -21,7 +21,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-    // dispatch(login());
+    dispatch(login());
   };
     return (
         <>
