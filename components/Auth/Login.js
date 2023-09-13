@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { login } from '../../store/reducers/auth';
 import { useDispatch } from 'react-redux';
+import Link from 'next/link';
 const Login = () => {
   const dispatch = useDispatch(); 
   const [formData, setFormData] = useState({
@@ -25,8 +26,10 @@ const Login = () => {
   };
     return (
         <>
-      <div className="flex h-screen min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+      <div className="flex h-screen min-h-full flex-col items-center justify-center lg:px-2">
+       
+       <div className="bg-white w-full rounded-lg shadow p-8 dark:border sm:max-w-md dark:bg-gray-800 dark:border-gray-700">
+       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
             src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -50,6 +53,7 @@ const Login = () => {
                   type="email"
                   autoComplete="email"
                   required
+                  placeholder="nahid@gmail.com"
                   value={formData.email}
                   onChange={handleInputChange}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -73,6 +77,7 @@ const Login = () => {
                   id="password"
                   name="password"
                   type="password"
+                  placeholder="******"
                   autoComplete="current-password"
                   required
                   value={formData.password}
@@ -94,11 +99,11 @@ const Login = () => {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Not a member?{' '}
-            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Sign Up
-            </a>
+            <Link href="/register" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Sign Up</Link>
           </p>
         </div>
+       </div>
+
       </div>
     </>
     );
