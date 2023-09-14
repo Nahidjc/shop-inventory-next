@@ -1,0 +1,1 @@
+export const api = process.env.NEXT_APP_API_URL;
