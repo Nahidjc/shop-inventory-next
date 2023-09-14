@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { login } from "../../store/reducers/auth";
 import { useDispatch } from "react-redux";
 import Link from "next/link";
+import withAuth from "../withAuth";
 const Signup = () => {
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
@@ -36,6 +37,11 @@ const Signup = () => {
             <h2 className="mt-24 md:mt-16 lg:mt-10  text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               Create an account
             </h2>
+            <img
+            className="mx-auto h-10 w-auto"
+            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+            alt="Your Company"
+          />
           </div>
 
           <div className="lg:mt-10 p-5 lg:p-0  sm:mx-auto sm:w-full sm:max-w-lg ">
