@@ -60,7 +60,7 @@ This project is open-source, and we invite developers like you to join our commu
 3. Create a new branch for your feature or bugfix: `git checkout -b feature-name`.
 4. Implement the changes and commit them: `git commit -m "Description of your changes"`.
 5. Push your changes to your forked repository: `git push origin feature-name`.
-6. Create a pull request from your branch to the main project repository.
+6. Create a pull request from your branch to the develop project repository.
 
 Your pull request will be reviewed, and once approved, your changes will be merged into the main project.
 
