@@ -4,6 +4,7 @@ import { store } from "../store/store";
 const Main = ({ children }) => {
   return (
     <Provider store={store}>
+
       {children}
     </Provider>
   );
