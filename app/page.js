@@ -1,9 +1,7 @@
 "use client"
-// import Counter from "@/components/Counter/Counter";
-import Sidebar from "@/components/sidebar/Sidebar";
-export default function Home() {
+import NestedLayout from "./(nested)/layout";
+export default function Home({children}) {
   return (
-        // <Counter />
-        <Sidebar></Sidebar>
+    <NestedLayout>{children}</NestedLayout>
   );
 }
